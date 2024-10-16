@@ -153,7 +153,7 @@ class RuleSetConvertor:
         for rule in rules.get("list", []):
             logger.info(f"Processing rule: {rule['fileName']}")
 
-            combined_json_content = {"version": 1, "rules": [{}]}
+            combined_json_content = {"version": 2, "rules": [{}]}
 
             for url in rule.get("url", []):
                 list_content = self.get_rule_set_list(url)
@@ -204,7 +204,7 @@ class RuleSetConvertor:
         for rule in rules.get("yaml", []):
             logger.info(f"Processing rule: {rule['fileName']}")
 
-            combined_json_content = {"version": 1, "rules": [{}]}
+            combined_json_content = {"version": 2, "rules": [{}]}
 
             for url in rule.get("url", []):
                 yaml_content = self.get_rule_set(url)
