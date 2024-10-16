@@ -197,7 +197,7 @@ class RuleSetConvertor:
                     for key, values in custom_item.items():
                         json_content["rules"][0].setdefault(key, []).extend(values)
 
-            json_content["version"] = 1
+            json_content["version"] = 2
             self.save_to_file(json_content, rule["fileName"], "json")
             self.compile_json(rule["fileName"])
 
